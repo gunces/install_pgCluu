@@ -1,1 +1,1 @@
-# usefull-shell-scripts-for-postgres
+# shell_scripts_for_postgres
