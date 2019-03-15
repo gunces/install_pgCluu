@@ -1,12 +1,22 @@
 #!/bin/bash
 
+# Please Note: this script provides running pgcluu and generating reports. 
+# And this script maintenance pgcluu and its reporting folders also. 
+# If the server you run on it, does not have pgcluu installed, it does not work.
+#
+#
 # Pgcluu is one of monitoring tool for Postgres. You can see more information
 # about this http://pgcluu.darold.net/
 # This script help us to run pgcluu periodicaly like monthly. 
 # This script is also ready to run in cron. 
+#
+# Crontab example
+# 30 5 1 * * bash /var/lib/pgsql/bin/runpgcluu.sh
+#
+#
+
 
 # [GLOBAL]
-
 # Use DATE vairable for giving folder name in remote. 
 DATE=`date +%Y-%m -d "1 month ago"`
 ARCHIVING="LOCAL"
@@ -36,8 +46,6 @@ REMOTE_HOST=""
 REMOTE_USER=""
 PGCLUU_REMOTE_REPORT_DIR="/var/www/html/pgcluu/pgcluu-report-primary/"
 PGCLUU_REMOTE_ARCHIVE_DIR="/var/www/html/pgcluu/pgcluu-report-primary/$DATE"
-
-
 
 echo ""
 mkdir -m 755 -p $PGCLUU_DIR $PGCLUU_REPORT_DIR $PGCLUU_ARCHIVE_DIR
