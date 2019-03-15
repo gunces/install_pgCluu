@@ -136,6 +136,7 @@ else
 	exit 0
 fi
 
+
 # For generating new reports, pgcluu_collectd command starts again.
 /bin/pgcluu_collectd -D -i $TIME_RANGE $PGCLUU_DIR -h $HOSTNAME -p $PORT -U $DBUSER
 echo ""
