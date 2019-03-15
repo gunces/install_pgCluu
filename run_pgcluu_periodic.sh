@@ -1,19 +1,29 @@
 #!/bin/bash
 
-# Please Note: this script provides running pgcluu and generating reports. 
-# And this script maintenance pgcluu and its reporting folders also. 
-# If the server you run on it, does not have pgcluu installed, it does not work.
+# Please Note: Before using this shell script, you need to install pgcluu
+# properly. This script will not install pgcluu for you. If the server you run 
+# on it, does not have pgcluu installed, it does not work. 
+# 
+# This script provides running pgcluu, generating reports and maintenance 
+# everything that pgcluu require to collecting data and from beginning to end.
 #
+# 
 #
 # Pgcluu is one of monitoring tool for Postgres. You can see more information
 # about this http://pgcluu.darold.net/
-# This script help us to run pgcluu periodicaly like monthly. 
+# This script help us to run pgcluu periodicaly like monthly(or any retention, 
+# you can change easily).
+#
+#
 # This script is also ready to run in cron. 
 #
+# I suggest use this script with cron. You can make sure next month, pgcluu 
+# will start to collect new data for reports. 
+#
 # Crontab example
+# Run pgcluu script in every first day of month at 05:30
 # 30 5 1 * * bash /var/lib/pgsql/bin/runpgcluu.sh
-#
-#
+
 
 
 # [GLOBAL]
